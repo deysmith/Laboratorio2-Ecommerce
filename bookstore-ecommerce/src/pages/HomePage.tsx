@@ -31,7 +31,7 @@ export default function HomePage() {
 
         <footer className="catalog-footer">
           <span>
-            Proyecto 1 / Comercio Electrónico
+            Laboratorio / Comercio Electrónico
           </span>
 
           <span>
