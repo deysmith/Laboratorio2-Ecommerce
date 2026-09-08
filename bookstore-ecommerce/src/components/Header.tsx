@@ -2,8 +2,8 @@ export function Header() {
   return (
     <header className="catalog-header">
       <div className="brand-mark">
-        <span className="brand-mark__symbol">P</span>
-        <span>Proyecto 1</span>
+        <span className="brand-mark__symbol">B</span>
+        <span>Booksmart</span>
       </div>
       <nav aria-label="Navegación principal">
         <a href="#catalogo">Catálogo</a>

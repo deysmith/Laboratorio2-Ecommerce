@@ -1,6 +1,9 @@
-import { SearchBox } from "react-instantsearch"
+import { useState } from "react"
+import { Configure, SearchBox } from "react-instantsearch"
 
 export function CatalogIntro() {
+  const [exactSearch, setExactSearch] = useState(false)
+  
   return (
     <section className="catalog-intro" id="catalogo">
       <div>
@@ -13,7 +16,7 @@ export function CatalogIntro() {
         </h1>
 
         <p className="catalog-intro__copy">
-          Todos los libros disponibles en nuestra librería.
+          Bienvenidos a Booksmart. Todos tus libros favoritos en un solo lugar.
         </p>
       </div>
 
@@ -29,7 +32,17 @@ export function CatalogIntro() {
           />
         </div>
 
+        <button
+          type="button"
+          className={`exact-search-toggle ${exactSearch ? "is-active" : ""}`}
+          onClick={() => setExactSearch((prev) => !prev)}
+        >
+          Búsqueda exacta {exactSearch ? "activada" : "desactivada"}
+        </button>
+
       </div>
+
+      <Configure typoTolerance={!exactSearch} />
     </section>
   )
 }
